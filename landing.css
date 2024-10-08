@@ -1,0 +1,42 @@
+body {
+    display: flex;                   
+    justify-content: center;         
+    align-items: center;             
+    height: 100vh;                   
+    margin: 0;                       
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.832); 
+    width: 30%;
+    border-radius: 10px;
+    transform: scale(0);             /* Start scaled down */
+    animation: pop-up 0.5s ease-out forwards, alarm 1s infinite; /* Pop-up then alarm animation */
+}
+
+@keyframes pop-up {
+    to {
+        transform: scale(1);         /* Scale to full size */
+    }
+}
+
+@keyframes alarm {
+    0%, 100% {
+        transform: rotate(0deg);    
+    }
+    10%, 30% {
+        transform: rotate(3deg);    /* Smaller rotation */
+    }
+    20%, 40% {
+        transform: rotate(-3deg);   /* Smaller rotation */
+    }
+}
+
+h1 {
+    color: darkblue;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 1px rgba(0, 0, 0, 0.5); 
+}
