@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <link rel="icon" href="icons/welcome.png">
+    <link rel="stylesheet" href="vid.css">
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .video-container {
+            position: relative; /* Position for floating button */
+            height: 100vh; /* Full height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video {
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            object-fit: cover; /* Cover the entire area */
+        }
+        .back-button {
+            position: absolute; /* Float the button */
+            top: 20px; /* Position from the top */
+            left: 20px; /* Position from the left */
+            padding: 10px 20px; /* Button padding */
+            background-color: orange; /* Button color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer on hover */
+            z-index: 10; /* Ensure it’s above the video */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .back-button:hover {
+            background-color: darkorange; /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="vid/myvid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+    </div>
+</body>
+</html>
