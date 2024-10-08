@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>githubhosting</title>
-    <link rel="stylesheet" href="landing.css">
+
     <link rel="icon" href="icons/welcome.png">
 </head>
 <body>
@@ -16,4 +16,60 @@
     </div>
 </body>
 </html>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Background color */
+}
 
+.container {
+    text-align: center; /* Center text and button */
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace; /* Typewriter style font */
+    font-size: 2em;
+    color: #333; /* Text color */
+    overflow: hidden; /* Ensures the text is hidden during animation */
+    border-right: .15em solid orange; /* Cursor effect */
+    white-space: nowrap; /* Prevents text from wrapping */
+    animation: typing 1s steps(30, end), blink-caret .75s step-end infinite; /* Typing animation */
+}
+
+@keyframes typing {
+    from {
+        width: 0; /* Start with no width */
+    }
+    to {
+        width: 35%; /* End with specified width */
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* No border */
+    }
+    50% {
+        border-color: orange; /* Blink effect */
+    }
+}
+
+button {
+    margin-top: 20px; /* Space between the text and button */
+    padding: 10px 20px; /* Button padding */
+    font-size: 1em; /* Button font size */
+    cursor: pointer; /* Change cursor on hover */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: orange; /* Button color */
+    color: white; /* Text color */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: darkorange; /* Change color on hover */
+}
+</style>
